@@ -1,9 +1,12 @@
 import org.joda.time.DateTime
 
-class ScheduleBuilder1(programmeLookupService: ProgrammeLookupService) {
+class ScheduleBuilder1(programmeLookupService:
+                       ProgrammeLookupService) {
 
   def buildProgrammeSchedule(): Seq[Programme] = {
-    programmeLookupService.getProgrammes.sortBy(_.airDate)
+    programmeLookupService
+      .getProgrammes
+      .sortBy(_.airDate)
   }
 }
 
